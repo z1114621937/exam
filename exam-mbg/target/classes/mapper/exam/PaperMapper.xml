@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mbg.exam.mapper.PaperMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mbg.exam.entity.Paper">
+        <id column="id" property="id" />
+        <result column="exam_name" property="examName" />
+        <result column="manner" property="manner" />
+        <result column="tea_name" property="teaName" />
+        <result column="score" property="score" />
+        <result column="subject" property="subject" />
+        <result column="create_date" property="createDate" />
+        <result column="modify_date" property="modifyDate" />
+        <result column="state" property="state" />
+        <result column="start_time" property="startTime" />
+        <result column="end_time" property="endTime" />
+        <result column="exam_time" property="examTime" />
+        <result column="num" property="num" />
+    </resultMap>
+
+</mapper>

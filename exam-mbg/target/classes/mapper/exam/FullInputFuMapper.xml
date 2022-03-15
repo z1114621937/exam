@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mbg.exam.mapper.FullInputFuMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mbg.exam.entity.FullInputFu">
+        <id column="id" property="id" />
+        <result column="subject" property="subject" />
+        <result column="data" property="data" />
+        <result column="answer1A" property="answer1a" />
+        <result column="answer1B" property="answer1b" />
+        <result column="answer1C" property="answer1c" />
+        <result column="answer1D" property="answer1d" />
+        <result column="answer2A" property="answer2a" />
+        <result column="answer2B" property="answer2b" />
+        <result column="answer2C" property="answer2c" />
+        <result column="answer2D" property="answer2d" />
+        <result column="answer3A" property="answer3a" />
+        <result column="answer3B" property="answer3b" />
+        <result column="answer3C" property="answer3c" />
+        <result column="answer3D" property="answer3d" />
+        <result column="answer4A" property="answer4a" />
+        <result column="answer4B" property="answer4b" />
+        <result column="answer4C" property="answer4c" />
+        <result column="answer4D" property="answer4d" />
+        <result column="answer5A" property="answer5a" />
+        <result column="answer5B" property="answer5b" />
+        <result column="answer5C" property="answer5c" />
+        <result column="answer5D" property="answer5d" />
+        <result column="answer6A" property="answer6a" />
+        <result column="answer6B" property="answer6b" />
+        <result column="answer6C" property="answer6c" />
+        <result column="answer6D" property="answer6d" />
+        <result column="answer7A" property="answer7a" />
+        <result column="answer7B" property="answer7b" />
+        <result column="answer7C" property="answer7c" />
+        <result column="answer7D" property="answer7d" />
+        <result column="answer8A" property="answer8a" />
+        <result column="answer8B" property="answer8b" />
+        <result column="answer8C" property="answer8c" />
+        <result column="answer8D" property="answer8d" />
+        <result column="answer9A" property="answer9a" />
+        <result column="answer9B" property="answer9b" />
+        <result column="answer9C" property="answer9c" />
+        <result column="answer9D" property="answer9d" />
+        <result column="answer10A" property="answer10a" />
+        <result column="answer10B" property="answer10b" />
+        <result column="answer10C" property="answer10c" />
+        <result column="answer10D" property="answer10d" />
+        <result column="answer11A" property="answer11a" />
+        <result column="answer11B" property="answer11b" />
+        <result column="answer11C" property="answer11c" />
+        <result column="answer11D" property="answer11d" />
+        <result column="answer12A" property="answer12a" />
+        <result column="answer12B" property="answer12b" />
+        <result column="answer12C" property="answer12c" />
+        <result column="answer12D" property="answer12d" />
+        <result column="answer13A" property="answer13a" />
+        <result column="answer13B" property="answer13b" />
+        <result column="answer13C" property="answer13c" />
+        <result column="answer13D" property="answer13d" />
+        <result column="answer14A" property="answer14a" />
+        <result column="answer14B" property="answer14b" />
+        <result column="answer14C" property="answer14c" />
+        <result column="answer14D" property="answer14d" />
+        <result column="answer15A" property="answer15a" />
+        <result column="answer15B" property="answer15b" />
+        <result column="answer15C" property="answer15c" />
+        <result column="answer15D" property="answer15d" />
+        <result column="right1" property="right1" />
+        <result column="right2" property="right2" />
+        <result column="right3" property="right3" />
+        <result column="right4" property="right4" />
+        <result column="right5" property="right5" />
+        <result column="right6" property="right6" />
+        <result column="right7" property="right7" />
+        <result column="right8" property="right8" />
+        <result column="right9" property="right9" />
+        <result column="right10" property="right10" />
+        <result column="right11" property="right11" />
+        <result column="right12" property="right12" />
+        <result column="right13" property="right13" />
+        <result column="right14" property="right14" />
+        <result column="right15" property="right15" />
+        <result column="analysis" property="analysis" />
+        <result column="create_date" property="createDate" />
+        <result column="modify_date" property="modifyDate" />
+        <result column="state" property="state" />
+        <result column="paper_id" property="paperId" />
+    </resultMap>
+
+</mapper>

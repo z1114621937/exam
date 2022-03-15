@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mbg.exam.mapper.ListenMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mbg.exam.entity.Listen">
+        <id column="id" property="id" />
+        <result column="subject" property="subject" />
+        <result column="data" property="data" />
+        <result column="question" property="question" />
+        <result column="answerA" property="answera" />
+        <result column="answerB" property="answerb" />
+        <result column="answerC" property="answerc" />
+        <result column="answerD" property="answerd" />
+        <result column="right" property="right" />
+        <result column="analysis" property="analysis" />
+        <result column="score" property="score" />
+        <result column="create_date" property="createDate" />
+        <result column="modify_date" property="modifyDate" />
+        <result column="state" property="state" />
+    </resultMap>
+
+</mapper>
