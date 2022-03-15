@@ -16,7 +16,7 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author zuo
- * @since 2022-03-14
+ * @since 2022-03-15
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -30,29 +30,35 @@ public class FillFu implements Serializable {
     private Integer id;
 
     @ApiModelProperty(value = "问题")
-    private String question;
+    private String fiQuestion;
 
     @ApiModelProperty(value = "科目")
-    private String subject;
+    private String fiSubject;
 
     @ApiModelProperty(value = "正确答案")
-    private String right;
+    private String fiRight;
 
     @ApiModelProperty(value = "题目解析")
-    private String analysis;
+    private String fiAnalysis;
 
     @ApiModelProperty(value = "分数")
-    private Integer score;
+    private Integer fiScore;
 
     private LocalDateTime createDate;
 
     private LocalDateTime modifyDate;
 
     @ApiModelProperty(value = "状态 （1是填空  2是判断）")
-    private Integer state;
+    private Integer fiState;
 
     @ApiModelProperty(value = "试卷id")
     private Integer paperId;
+
+    @ApiModelProperty(value = "学期")
+    private String fiSemester;
+
+    @ApiModelProperty(value = "是否被删除")
+    private Integer stateDe;
 
 
 }

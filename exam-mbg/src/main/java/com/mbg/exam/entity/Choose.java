@@ -17,7 +17,7 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author zuo
- * @since 2022-03-14
+ * @since 2022-03-15
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -31,42 +31,45 @@ public class Choose implements Serializable {
     private Integer id;
 
     @ApiModelProperty(value = "考试科目")
-    private String subject;
+    private String ctSubject;
 
     @ApiModelProperty(value = "问题")
-    private String question;
+    private String ctQuestion;
 
     @ApiModelProperty(value = "选择A")
-    @TableField("answerA")
-    private String answera;
+    @TableField("ct_answerA")
+    private String ctAnswera;
 
     @ApiModelProperty(value = "选择B")
-    @TableField("answerB")
-    private String answerb;
+    @TableField("ct_answerB")
+    private String ctAnswerb;
 
     @ApiModelProperty(value = "选择C")
-    @TableField("answerC")
-    private String answerc;
+    @TableField("ct_answerC")
+    private String ctAnswerc;
 
     @ApiModelProperty(value = "选择D")
-    @TableField("answerD")
-    private String answerd;
+    @TableField("ct_answerD")
+    private String ctAnswerd;
 
     @ApiModelProperty(value = "正确答案")
-    private String right;
+    private String ctRight;
 
     @ApiModelProperty(value = "题目解析")
-    private String analysis;
+    private String ctAnalysis;
 
     @ApiModelProperty(value = "分数")
-    private Integer score;
+    private Integer ctScore;
 
     private LocalDateTime createDate;
 
     private LocalDateTime modifyDate;
 
     @ApiModelProperty(value = "状态（1是单选  2是多选）")
-    private Integer state;
+    private Integer ctState;
+
+    @ApiModelProperty(value = "是否删除")
+    private Integer stateDe;
 
 
 }

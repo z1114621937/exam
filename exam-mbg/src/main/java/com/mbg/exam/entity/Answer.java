@@ -16,7 +16,7 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author zuo
- * @since 2022-03-14
+ * @since 2022-03-15
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -44,6 +44,12 @@ public class Answer implements Serializable {
     private LocalDateTime createDate;
 
     private LocalDateTime modifyDate;
+
+    @ApiModelProperty(value = "0是choose 1是fill 2是mingci ")
+    private Integer state;
+
+    @ApiModelProperty(value = "是否被删除")
+    private Integer stateDe;
 
 
 }

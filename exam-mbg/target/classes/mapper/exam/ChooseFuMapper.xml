@@ -5,19 +5,21 @@
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.mbg.exam.entity.ChooseFu">
         <id column="id" property="id" />
-        <result column="subject" property="subject" />
-        <result column="question" property="question" />
-        <result column="answerA" property="answera" />
-        <result column="answerB" property="answerb" />
-        <result column="answerC" property="answerc" />
-        <result column="answerD" property="answerd" />
-        <result column="right" property="right" />
-        <result column="analysis" property="analysis" />
-        <result column="score" property="score" />
+        <result column="c_subject" property="cSubject" />
+        <result column="c_question" property="cQuestion" />
+        <result column="c_answerA" property="cAnswera" />
+        <result column="c_answerB" property="cAnswerb" />
+        <result column="c_answerC" property="cAnswerc" />
+        <result column="c_answerD" property="cAnswerd" />
+        <result column="c_right" property="cRight" />
+        <result column="c_analysis" property="cAnalysis" />
+        <result column="c_score" property="cScore" />
         <result column="create_date" property="createDate" />
         <result column="modify_date" property="modifyDate" />
-        <result column="state" property="state" />
+        <result column="c_state" property="cState" />
         <result column="paper_id" property="paperId" />
+        <result column="c_semester" property="cSemester" />
+        <result column="state_de" property="stateDe" />
     </resultMap>
 
 </mapper>

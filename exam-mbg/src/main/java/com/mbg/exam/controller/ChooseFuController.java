@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * </p>
  *
  * @author zuo
- * @since 2022-03-14
+ * @since 2022-03-15
  */
 @RestController
 @RequestMapping("/exam/chooseFu")

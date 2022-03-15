@@ -5,14 +5,15 @@
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.mbg.exam.entity.Mingci">
         <id column="id" property="id" />
-        <result column="question" property="question" />
-        <result column="right" property="right" />
-        <result column="analysis" property="analysis" />
-        <result column="score" property="score" />
+        <result column="mt_question" property="mtQuestion" />
+        <result column="mt_right" property="mtRight" />
+        <result column="mt_analysis" property="mtAnalysis" />
+        <result column="mt_score" property="mtScore" />
         <result column="create_date" property="createDate" />
         <result column="modify_date" property="modifyDate" />
-        <result column="subject" property="subject" />
-        <result column="state" property="state" />
+        <result column="mt_subject" property="mtSubject" />
+        <result column="mt_state" property="mtState" />
+        <result column="state_de" property="stateDe" />
     </resultMap>
 
 </mapper>

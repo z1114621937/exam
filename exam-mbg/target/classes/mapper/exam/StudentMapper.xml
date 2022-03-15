@@ -16,6 +16,7 @@
         <result column="modify_date" property="modifyDate" />
         <result column="school" property="school" />
         <result column="classes" property="classes" />
+        <result column="state_de" property="stateDe" />
     </resultMap>
 
 </mapper>

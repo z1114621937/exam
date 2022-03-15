@@ -5,8 +5,8 @@
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.mbg.exam.entity.FullInputFu">
         <id column="id" property="id" />
-        <result column="subject" property="subject" />
-        <result column="data" property="data" />
+        <result column="in_subject" property="inSubject" />
+        <result column="in_data" property="inData" />
         <result column="answer1A" property="answer1a" />
         <result column="answer1B" property="answer1b" />
         <result column="answer1C" property="answer1c" />
@@ -82,11 +82,13 @@
         <result column="right13" property="right13" />
         <result column="right14" property="right14" />
         <result column="right15" property="right15" />
-        <result column="analysis" property="analysis" />
+        <result column="in_analysis" property="inAnalysis" />
         <result column="create_date" property="createDate" />
         <result column="modify_date" property="modifyDate" />
-        <result column="state" property="state" />
+        <result column="in_state" property="inState" />
         <result column="paper_id" property="paperId" />
+        <result column="in_semester" property="inSemester" />
+        <result column="state_de" property="stateDe" />
     </resultMap>
 
 </mapper>

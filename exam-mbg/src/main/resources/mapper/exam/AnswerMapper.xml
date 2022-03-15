@@ -11,6 +11,8 @@
         <result column="is_true" property="isTrue" />
         <result column="create_date" property="createDate" />
         <result column="modify_date" property="modifyDate" />
+        <result column="state" property="state" />
+        <result column="state_de" property="stateDe" />
     </resultMap>
 
 </mapper>

@@ -5,14 +5,15 @@
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.mbg.exam.entity.Fill">
         <id column="id" property="id" />
-        <result column="question" property="question" />
-        <result column="subject" property="subject" />
-        <result column="right" property="right" />
-        <result column="analysis" property="analysis" />
-        <result column="score" property="score" />
+        <result column="ft_question" property="ftQuestion" />
+        <result column="ft_subject" property="ftSubject" />
+        <result column="ft_right" property="ftRight" />
+        <result column="ft_analysis" property="ftAnalysis" />
+        <result column="ft_score" property="ftScore" />
         <result column="create_date" property="createDate" />
         <result column="modify_date" property="modifyDate" />
-        <result column="state" property="state" />
+        <result column="ft_state" property="ftState" />
+        <result column="state_de" property="stateDe" />
     </resultMap>
 
 </mapper>

@@ -17,6 +17,7 @@
         <result column="end_time" property="endTime" />
         <result column="exam_time" property="examTime" />
         <result column="num" property="num" />
+        <result column="state_de" property="stateDe" />
     </resultMap>
 
 </mapper>

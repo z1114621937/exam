@@ -17,7 +17,7 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author zuo
- * @since 2022-03-14
+ * @since 2022-03-15
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -30,9 +30,9 @@ public class FullInput implements Serializable {
       @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    private String subject;
+    private String futSubject;
 
-    private String data;
+    private String futData;
 
     @TableField("answer1A")
     private String answer1a;
@@ -246,13 +246,16 @@ public class FullInput implements Serializable {
     private String right15;
 
     @ApiModelProperty(value = "分析")
-    private String analysis;
+    private String futAnalysis;
 
     private LocalDateTime createDate;
 
     private LocalDateTime modifyDate;
 
-    private Integer state;
+    private Integer futState;
+
+    @ApiModelProperty(value = "是否被删除")
+    private Integer stateDe;
 
 
 }

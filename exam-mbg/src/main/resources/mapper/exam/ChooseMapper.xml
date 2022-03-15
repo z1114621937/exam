@@ -5,18 +5,19 @@
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.mbg.exam.entity.Choose">
         <id column="id" property="id" />
-        <result column="subject" property="subject" />
-        <result column="question" property="question" />
-        <result column="answerA" property="answera" />
-        <result column="answerB" property="answerb" />
-        <result column="answerC" property="answerc" />
-        <result column="answerD" property="answerd" />
-        <result column="right" property="right" />
-        <result column="analysis" property="analysis" />
-        <result column="score" property="score" />
+        <result column="ct_subject" property="ctSubject" />
+        <result column="ct_question" property="ctQuestion" />
+        <result column="ct_answerA" property="ctAnswera" />
+        <result column="ct_answerB" property="ctAnswerb" />
+        <result column="ct_answerC" property="ctAnswerc" />
+        <result column="ct_answerD" property="ctAnswerd" />
+        <result column="ct_right" property="ctRight" />
+        <result column="ct_analysis" property="ctAnalysis" />
+        <result column="ct_score" property="ctScore" />
         <result column="create_date" property="createDate" />
         <result column="modify_date" property="modifyDate" />
-        <result column="state" property="state" />
+        <result column="ct_state" property="ctState" />
+        <result column="state_de" property="stateDe" />
     </resultMap>
 
 </mapper>

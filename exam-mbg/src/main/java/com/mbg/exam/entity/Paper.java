@@ -16,7 +16,7 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author zuo
- * @since 2022-03-14
+ * @since 2022-03-15
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -62,6 +62,9 @@ public class Paper implements Serializable {
 
     @ApiModelProperty(value = "考试场次")
     private Integer num;
+
+    @ApiModelProperty(value = "是否删除")
+    private Integer stateDe;
 
 
 }

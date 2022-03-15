@@ -17,7 +17,7 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author zuo
- * @since 2022-03-14
+ * @since 2022-03-15
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -31,40 +31,43 @@ public class Listen implements Serializable {
     private Integer id;
 
     @ApiModelProperty(value = "科目")
-    private String subject;
+    private String ltSubject;
 
     @ApiModelProperty(value = "听力")
-    private String data;
+    private String ltData;
 
     @ApiModelProperty(value = "听力问题")
-    private String question;
+    private String ltQuestion;
 
-    @TableField("answerA")
-    private String answera;
+    @TableField("lt_answerA")
+    private String ltAnswera;
 
-    @TableField("answerB")
-    private String answerb;
+    @TableField("lt_answerB")
+    private String ltAnswerb;
 
-    @TableField("answerC")
-    private String answerc;
+    @TableField("lt-answerC")
+    private String lt-answerc;
 
-    @TableField("answerD")
-    private String answerd;
+    @TableField("lt_answerD")
+    private String ltAnswerd;
 
     @ApiModelProperty(value = "正确选项")
-    private String right;
+    private String ltRight;
 
     @ApiModelProperty(value = "试题解析")
-    private String analysis;
+    private String ltAnalysis;
 
     @ApiModelProperty(value = "分数")
-    private Integer score;
+    private Integer ltScore;
 
     private LocalDateTime createDate;
 
     private LocalDateTime modifyDate;
 
-    private Integer state;
+    private Integer ltState;
+
+    @ApiModelProperty(value = "是否被删除")
+    private Integer stateDe;
 
 
 }

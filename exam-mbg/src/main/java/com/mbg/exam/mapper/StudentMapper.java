@@ -1,6 +1,5 @@
 package com.mbg.exam.mapper;
 
-import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.mbg.exam.entity.Student;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
@@ -10,9 +9,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author zuo
- * @since 2022-03-14
+ * @since 2022-03-15
  */
 public interface StudentMapper extends BaseMapper<Student> {
-
 
 }

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author zuo
- * @since 2022-03-14
+ * @since 2022-03-15
  */
 @Service
 public class MingciFuServiceImpl extends ServiceImpl<MingciFuMapper, MingciFu> implements MingciFuImplService {

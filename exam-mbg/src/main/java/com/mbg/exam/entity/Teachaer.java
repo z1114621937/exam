@@ -16,7 +16,7 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author zuo
- * @since 2022-03-14
+ * @since 2022-03-15
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -58,7 +58,7 @@ public class Teachaer implements Serializable {
     private LocalDateTime modifyDate;
 
     @ApiModelProperty(value = "状态 （0为禁止 1为启用）")
-    private Integer state;
+    private Integer stateDe;
 
 
 }

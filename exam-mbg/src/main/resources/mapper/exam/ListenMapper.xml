@@ -5,19 +5,20 @@
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.mbg.exam.entity.Listen">
         <id column="id" property="id" />
-        <result column="subject" property="subject" />
-        <result column="data" property="data" />
-        <result column="question" property="question" />
-        <result column="answerA" property="answera" />
-        <result column="answerB" property="answerb" />
-        <result column="answerC" property="answerc" />
-        <result column="answerD" property="answerd" />
-        <result column="right" property="right" />
-        <result column="analysis" property="analysis" />
-        <result column="score" property="score" />
+        <result column="lt_subject" property="ltSubject" />
+        <result column="lt_data" property="ltData" />
+        <result column="lt_question" property="ltQuestion" />
+        <result column="lt_answerA" property="ltAnswera" />
+        <result column="lt_answerB" property="ltAnswerb" />
+        <result column="lt-answerC" property="lt-answerc" />
+        <result column="lt_answerD" property="ltAnswerd" />
+        <result column="lt_right" property="ltRight" />
+        <result column="lt_analysis" property="ltAnalysis" />
+        <result column="lt_score" property="ltScore" />
         <result column="create_date" property="createDate" />
         <result column="modify_date" property="modifyDate" />
-        <result column="state" property="state" />
+        <result column="lt_state" property="ltState" />
+        <result column="state_de" property="stateDe" />
     </resultMap>
 
 </mapper>

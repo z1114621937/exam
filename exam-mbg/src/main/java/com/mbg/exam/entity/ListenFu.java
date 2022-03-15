@@ -17,7 +17,7 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author zuo
- * @since 2022-03-14
+ * @since 2022-03-15
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -31,43 +31,49 @@ public class ListenFu implements Serializable {
     private Integer id;
 
     @ApiModelProperty(value = "科目")
-    private String subject;
+    private String liSubject;
 
     @ApiModelProperty(value = "听力")
-    private String data;
+    private String liData;
 
     @ApiModelProperty(value = "听力问题")
-    private String question;
+    private String liQuestion;
 
-    @TableField("answerA")
-    private String answera;
+    @TableField("li_answerA")
+    private String liAnswera;
 
-    @TableField("answerB")
-    private String answerb;
+    @TableField("li_answerB")
+    private String liAnswerb;
 
-    @TableField("answerC")
-    private String answerc;
+    @TableField("li_answerC")
+    private String liAnswerc;
 
-    @TableField("answerD")
-    private String answerd;
+    @TableField("li_answerD")
+    private String liAnswerd;
 
     @ApiModelProperty(value = "正确选项")
-    private String right;
+    private String liRight;
 
     @ApiModelProperty(value = "试题解析")
-    private String analysis;
+    private String liAnalysis;
 
     @ApiModelProperty(value = "分数")
-    private Integer score;
+    private Integer liScore;
 
     private LocalDateTime createDate;
 
     private LocalDateTime modifyDate;
 
-    private Integer state;
+    private Integer liState;
 
     @ApiModelProperty(value = "试卷id")
     private Integer paperId;
+
+    @ApiModelProperty(value = "学期")
+    private String liSemester;
+
+    @ApiModelProperty(value = "是否被删除")
+    private Integer stateDe;
 
 
 }
