@@ -16,7 +16,7 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author zuo
- * @since 2022-03-15
+ * @since 2022-03-16
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -38,6 +38,9 @@ public class SuperAdmin implements Serializable {
     private LocalDateTime createDate;
 
     private LocalDateTime modifyDate;
+
+    @ApiModelProperty(value = "1是学生 2是老师 3是超级")
+    private Integer category;
 
 
 }
