@@ -1,5 +1,6 @@
 package com.mbg.exam.entity;
 
+import cn.hutool.core.date.DateTime;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -50,9 +51,9 @@ public class Student implements Serializable {
     @ApiModelProperty(value = "头像")
     private String picture;
 
-    private LocalDateTime createDate;
+    private DateTime createDate;
 
-    private LocalDateTime modifyDate;
+    private DateTime modifyDate;
 
     @ApiModelProperty(value = "学校")
     private String school;

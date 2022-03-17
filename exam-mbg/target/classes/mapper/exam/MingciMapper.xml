@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mbg.exam.mapper.MingciMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mbg.exam.entity.Mingci">
+        <id column="id" property="id" />
+        <result column="mt_question" property="mtQuestion" />
+        <result column="mt_right" property="mtRight" />
+        <result column="mt_analysis" property="mtAnalysis" />
+        <result column="mt_score" property="mtScore" />
+        <result column="create_date" property="createDate" />
+        <result column="modify_date" property="modifyDate" />
+        <result column="mt_subject" property="mtSubject" />
+        <result column="mt_state" property="mtState" />
+        <result column="state_de" property="stateDe" />
+        <result column="mt_level" property="mtLevel" />
+    </resultMap>
+
+</mapper>
