@@ -10,7 +10,7 @@
         <result column="lt_question" property="ltQuestion" />
         <result column="lt_answerA" property="ltAnswera" />
         <result column="lt_answerB" property="ltAnswerb" />
-        <result column="lt-answerC" property="lt-answerc" />
+        <result column="lt_answerC" property="ltAnswerc" />
         <result column="lt_answerD" property="ltAnswerd" />
         <result column="lt_right" property="ltRight" />
         <result column="lt_analysis" property="ltAnalysis" />
@@ -19,6 +19,7 @@
         <result column="modify_date" property="modifyDate" />
         <result column="lt_state" property="ltState" />
         <result column="state_de" property="stateDe" />
+        <result column="lt_level" property="ltLevel" />
     </resultMap>
 
 </mapper>

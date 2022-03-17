@@ -89,6 +89,7 @@
         <result column="paper_id" property="paperId" />
         <result column="in_semester" property="inSemester" />
         <result column="state_de" property="stateDe" />
+        <result column="in_level" property="inLevel" />
     </resultMap>
 
 </mapper>

@@ -4,11 +4,8 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.common.api.CommonResult;
-
 import com.mbg.exam.entity.Student;
-import com.mbg.exam.mapper.PaperMapper;
 import com.mbg.exam.mapper.StudentMapper;
-
 import com.stu.service.StudentImplService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;

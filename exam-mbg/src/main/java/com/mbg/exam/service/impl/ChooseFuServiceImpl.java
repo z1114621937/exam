@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * </p>
  *
  * @author zuo
- * @since 2022-03-15
+ * @since 2022-03-17
  */
 @Service
 public class ChooseFuServiceImpl extends ServiceImpl<ChooseFuMapper, ChooseFu> implements ChooseFuImplService {

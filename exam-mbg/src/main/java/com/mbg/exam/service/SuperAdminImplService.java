@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * </p>
  *
  * @author zuo
- * @since 2022-03-16
+ * @since 2022-03-17
  */
 public interface SuperAdminImplService extends IService<SuperAdmin> {
 

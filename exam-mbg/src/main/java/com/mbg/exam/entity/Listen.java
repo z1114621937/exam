@@ -17,7 +17,7 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author zuo
- * @since 2022-03-15
+ * @since 2022-03-17
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -45,8 +45,8 @@ public class Listen implements Serializable {
     @TableField("lt_answerB")
     private String ltAnswerb;
 
-    @TableField("lt-answerC")
-    private String lt-answerc;
+    @TableField("lt_answerC")
+    private String ltAnswerc;
 
     @TableField("lt_answerD")
     private String ltAnswerd;
@@ -68,6 +68,9 @@ public class Listen implements Serializable {
 
     @ApiModelProperty(value = "是否被删除")
     private Integer stateDe;
+
+    @ApiModelProperty(value = "难易")
+    private String ltLevel;
 
 
 }

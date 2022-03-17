@@ -16,7 +16,7 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author zuo
- * @since 2022-03-15
+ * @since 2022-03-17
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -26,8 +26,8 @@ public class Class implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-      @TableId(value = "id", type = IdType.AUTO)
-    private Integer id;
+      @TableId(value = " id", type = IdType.AUTO)
+    private Integer  id;
 
     @ApiModelProperty(value = "专业（班级）")
     private String specialized;

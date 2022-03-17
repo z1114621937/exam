@@ -87,6 +87,7 @@
         <result column="modify_date" property="modifyDate" />
         <result column="fut_state" property="futState" />
         <result column="state_de" property="stateDe" />
+        <result column="fut_level" property="futLevel" />
     </resultMap>
 
 </mapper>

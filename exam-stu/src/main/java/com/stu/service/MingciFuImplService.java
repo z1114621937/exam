@@ -9,7 +9,7 @@ import com.mbg.exam.entity.MingciFu;
  * </p>
  *
  * @author zuo
- * @since 2022-03-14
+ * @since 2022-03-17
  */
 public interface MingciFuImplService extends IService<MingciFu> {
 

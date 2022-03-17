@@ -16,7 +16,7 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author zuo
- * @since 2022-03-15
+ * @since 2022-03-17
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -59,6 +59,9 @@ public class FillFu implements Serializable {
 
     @ApiModelProperty(value = "是否被删除")
     private Integer stateDe;
+
+    @ApiModelProperty(value = "难易层度")
+    private String fiLevel;
 
 
 }

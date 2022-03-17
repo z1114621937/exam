@@ -14,6 +14,7 @@
         <result column="modify_date" property="modifyDate" />
         <result column="ft_state" property="ftState" />
         <result column="state_de" property="stateDe" />
+        <result column="ft_level" property="ftLevel" />
     </resultMap>
 
 </mapper>

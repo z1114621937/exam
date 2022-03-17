@@ -21,6 +21,7 @@
         <result column="paper_id" property="paperId" />
         <result column="li_semester" property="liSemester" />
         <result column="state_de" property="stateDe" />
+        <result column="li_level" property="liLevel" />
     </resultMap>
 
 </mapper>

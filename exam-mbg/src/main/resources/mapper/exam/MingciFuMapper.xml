@@ -16,6 +16,7 @@
         <result column="paper_id" property="paperId" />
         <result column="mi_semester" property="miSemester" />
         <result column="state_de" property="stateDe" />
+        <result column="mi_level" property="miLevel" />
     </resultMap>
 
 </mapper>

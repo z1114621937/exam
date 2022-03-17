@@ -18,6 +18,7 @@
         <result column="modify_date" property="modifyDate" />
         <result column="ct_state" property="ctState" />
         <result column="state_de" property="stateDe" />
+        <result column="ct_level" property="ctLevel" />
     </resultMap>
 
 </mapper>

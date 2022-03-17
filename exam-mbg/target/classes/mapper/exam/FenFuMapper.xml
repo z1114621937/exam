@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mbg.exam.mapper.FenFuMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mbg.exam.entity.FenFu">
+        <id column="id" property="id" />
+        <result column="fen_subject" property="fenSubject" />
+        <result column="fen_question" property="fenQuestion" />
+        <result column="fen_answer1" property="fenAnswer1" />
+        <result column="fen_right1" property="fenRight1" />
+        <result column="fen_answer2" property="fenAnswer2" />
+        <result column="fen_right2" property="fenRight2" />
+        <result column="fen_answer3" property="fenAnswer3" />
+        <result column="fen_right3" property="fenRight3" />
+        <result column="fen_answer4" property="fenAnswer4" />
+        <result column="fen_right4" property="fenRight4" />
+        <result column="fen_answer5" property="fenAnswer5" />
+        <result column="fen_right5" property="fenRight5" />
+        <result column="fen_analysis" property="fenAnalysis" />
+        <result column="fen_score" property="fenScore" />
+        <result column="create_date" property="createDate" />
+        <result column="modify_date" property="modifyDate" />
+        <result column="state_de" property="stateDe" />
+        <result column="fen_level" property="fenLevel" />
+        <result column="paper_id" property="paperId" />
+    </resultMap>
+
+</mapper>

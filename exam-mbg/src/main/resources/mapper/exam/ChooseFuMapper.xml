@@ -20,6 +20,7 @@
         <result column="paper_id" property="paperId" />
         <result column="c_semester" property="cSemester" />
         <result column="state_de" property="stateDe" />
+        <result column="c_level" property="cLevel" />
     </resultMap>
 
 </mapper>

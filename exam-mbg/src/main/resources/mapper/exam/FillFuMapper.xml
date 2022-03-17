@@ -16,6 +16,7 @@
         <result column="paper_id" property="paperId" />
         <result column="fi_semester" property="fiSemester" />
         <result column="state_de" property="stateDe" />
+        <result column="fi_level" property="fiLevel" />
     </resultMap>
 
 </mapper>
