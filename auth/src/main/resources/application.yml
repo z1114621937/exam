@@ -13,7 +13,7 @@ spring:
         namespace: public  #环境隔离
 
   datasource:
-    url: jdbc:mysql://localhost:3306/auth?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://localhost:3306/exam?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
     username: root
     password: root
     druid:

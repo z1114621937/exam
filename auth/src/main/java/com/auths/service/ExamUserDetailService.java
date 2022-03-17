@@ -4,7 +4,11 @@ package com.auths.service;
 import com.alibaba.cloud.commons.lang.StringUtils;
 import com.auths.domain.MemberDetails;
 import com.auths.domain.UmsMember;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.mbg.exam.entity.Student;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -20,10 +24,15 @@ import org.springframework.stereotype.Service;
 @Slf4j
 public class ExamUserDetailService implements UserDetailsService {
 
+    @Bean
     public PasswordEncoder passwordEncoder() {
 //        return NoOpPasswordEncoder.getInstance();
         return new BCryptPasswordEncoder();
     }
+
+    @Autowired
+    StudentImplService service;
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
@@ -34,16 +43,20 @@ public class ExamUserDetailService implements UserDetailsService {
             throw new UsernameNotFoundException("用户名不能为空");
         }
 
-        UmsMember umsMember = new UmsMember(1,"admin",passwordEncoder().encode("123456"),1);
+        QueryWrapper<Student> queryWrapper =new QueryWrapper<>();
+        queryWrapper.lambda().eq(Student::getUsername,username);
+        Student student=service.getOne(queryWrapper);
 
-        if (null == umsMember) {
+     //   UmsMember umsMember = new UmsMember(1,"admin",passwordEncoder().encode("123456"),1);
+
+        if (null == student) {
             log.warn("根据用户名没有查询到对应的用户信息:{}", username);
         }
 
-        log.info("根据用户名:{}获取用户登陆信息:{}", username, umsMember);
+        log.info("根据用户名:{}获取用户登陆信息:{}", username, student);
 
         // 会员信息的封装   必须封装到implements UserDetails
-        MemberDetails memberDetails = new MemberDetails(umsMember);
+        MemberDetails memberDetails = new MemberDetails(student);
 
         return memberDetails;
     }

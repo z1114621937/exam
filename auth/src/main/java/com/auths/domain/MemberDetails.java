@@ -1,6 +1,7 @@
 package com.auths.domain;
 
 
+import com.mbg.exam.entity.Student;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -12,10 +13,10 @@ import java.util.Collection;
  * @author zuo
  */
 public class MemberDetails implements UserDetails {
-    private UmsMember umsMember;
+    private Student student;
     
-    public MemberDetails(UmsMember umsMember) {
-        this.umsMember = umsMember;
+    public MemberDetails(Student student) {
+        this.student = student;
     }
     
     @Override
@@ -26,12 +27,12 @@ public class MemberDetails implements UserDetails {
     
     @Override
     public String getPassword() {
-        return umsMember.getPassword();
+        return student.getPassword();
     }
     
     @Override
     public String getUsername() {
-        return umsMember.getUsername();
+        return student.getUsername();
     }
     
     @Override
@@ -51,10 +52,10 @@ public class MemberDetails implements UserDetails {
     
     @Override
     public boolean isEnabled() {
-        return umsMember.getStatus()==1;
+        return true;
     }
     
-    public UmsMember getUmsMember() {
-        return umsMember;
+    public Student getStudent() {
+        return student;
     }
 }
