@@ -53,14 +53,14 @@ public class StudentServiceImpl extends ServiceImpl<StudentMapper, Student> impl
 
 //   todo 这里id需要token拿
     @Override
-    public CommonResult avatar(String url) {
+    public CommonResult avatar(String url,int id) {
 
 
         Student student=new Student();
         UpdateWrapper<Student> updateWrapper = new UpdateWrapper<>();
         updateWrapper.lambda()
                 .set(Student::getPicture,url)
-                .eq(Student::getId,1);
+                .eq(Student::getId,id);
         baseMapper.update(student,updateWrapper);
         return CommonResult.success("头像添加成功");
     }
@@ -68,7 +68,7 @@ public class StudentServiceImpl extends ServiceImpl<StudentMapper, Student> impl
 
     //todo   需要id先用数据库有的 比如1 后面加
     @Override
-    public CommonResult supplements(String name, String age, String sex, String stu_num, String school, String classes) {
+    public CommonResult supplements(String name, String age, String sex, String stu_num, String school, String classes,int id) {
         Student student=new Student();
         UpdateWrapper<Student> updateWrapper=new UpdateWrapper<>();
         updateWrapper.lambda()
@@ -78,9 +78,9 @@ public class StudentServiceImpl extends ServiceImpl<StudentMapper, Student> impl
                 .set(Student::getStuNum,stu_num)
                 .set(Student::getSchool,school)
                 .set(Student::getClasses,classes)
-                .eq(Student::getId,1);
+                .eq(Student::getId,id);
         baseMapper.update(student,updateWrapper);
-        student=baseMapper.selectById(1);
+        student=baseMapper.selectById(id);
         return CommonResult.success(student,"个人信息添加成功");
     }
 

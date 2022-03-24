@@ -21,9 +21,12 @@ public class ExamTokenEnhancer implements TokenEnhancer {
         final Map<String, Object> retMap = new HashMap<>();
 
 //todo 这里暴露memberId到Jwt的令牌中,后期可以根据自己的业务需要 进行添加字段
-        additionalInfo.put("id",memberDetails.getStudent().getId());
+        additionalInfo.put("memberId",memberDetails.getStudent().getId());
         additionalInfo.put("nickName",memberDetails.getStudent().getName());
         additionalInfo.put("username",memberDetails.getStudent().getUsername());
+        additionalInfo.put("school",memberDetails.getStudent().getSchool());
+        additionalInfo.put("classes",memberDetails.getStudent().getClasses());
+        additionalInfo.put("stuNum",memberDetails.getStudent().getStuNum());
 
         retMap.put("additionalInfo",additionalInfo);
 

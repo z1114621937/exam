@@ -1,0 +1,33 @@
+server:
+  port: 8088
+spring:
+  main:
+    allow-bean-definition-overriding: true      #允许bean定义可以去覆盖
+  application:
+    name: exam-sup
+    #配置nacos注册中心地址
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.95.232.196:8847  #注册中心地址
+        namespace: public  #环境隔离
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/exam?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+    druid:
+      initial-size: 5 #连接池初始化大小
+      min-idle: 10 #最小空闲连接数
+      max-active: 20 #最大连接数
+      web-stat-filter:
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*" #不统计这些请求数据
+      stat-view-servlet: #访问监控网页的登录用户名和密码
+        login-username: druid
+        login-password: druid
+## application-dev.yml 文件
+mybatis-plus:
+  configuration:
+    ## 日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+

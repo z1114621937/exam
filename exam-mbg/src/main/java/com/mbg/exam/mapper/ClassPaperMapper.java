@@ -1,7 +1,13 @@
 package com.mbg.exam.mapper;
 
+import com.common.api.CommonResult;
 import com.mbg.exam.entity.ClassPaper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Param;
+
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -13,4 +19,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface ClassPaperMapper extends BaseMapper<ClassPaper> {
 
+    List<Map<String, Object>> inquiry(@Param("school")String school, @Param("classes")String classes,@Param("stuNum")String stuNum);
 }

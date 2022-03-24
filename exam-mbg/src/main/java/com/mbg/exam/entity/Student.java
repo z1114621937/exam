@@ -1,11 +1,12 @@
 package com.mbg.exam.entity;
 
 import cn.hutool.core.date.DateTime;
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.time.LocalDateTime;
 import java.io.Serializable;
+import java.util.Date;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -51,9 +52,13 @@ public class Student implements Serializable {
     @ApiModelProperty(value = "头像")
     private String picture;
 
-    private DateTime createDate;
+    // 创建时间：希望在添加数据的时候填充：当前时间
+    @TableField(fill = FieldFill.INSERT)
+    private Date createDate;
 
-    private DateTime modifyDate;
+    // 修改时间：希望在添加数据、修改数据的时候填充：当前时间
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private Date modifyDate;
 
     @ApiModelProperty(value = "学校")
     private String school;
@@ -64,5 +69,5 @@ public class Student implements Serializable {
     @ApiModelProperty(value = "是否被删除")
     private Integer stateDe;
 
-
+    private Integer staTe;
 }

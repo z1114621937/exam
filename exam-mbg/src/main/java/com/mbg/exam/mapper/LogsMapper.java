@@ -1,7 +1,11 @@
 package com.mbg.exam.mapper;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.mbg.exam.entity.Logs;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+
+import java.util.Map;
 
 /**
  * <p>
@@ -13,4 +17,5 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface LogsMapper extends BaseMapper<Logs> {
 
+    IPage<Map> selectall(Page<Map> page);
 }

@@ -17,6 +17,18 @@
         <result column="school" property="school" />
         <result column="classes" property="classes" />
         <result column="state_de" property="stateDe" />
+        <result column="staTe" property="staTe" />
     </resultMap>
+
+    <resultMap id="selectguanmap" type="java.util.HashMap">
+
+
+    </resultMap>
+
+
+    <select id="selectguan" resultMap="selectguanmap">
+        select id,name,state_de from ks_student where sta_te=1
+    </select>
+
 
 </mapper>

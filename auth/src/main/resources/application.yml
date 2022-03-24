@@ -28,7 +28,7 @@ spring:
 
 exam:
   jwt:
-    keyPairName: jwt.jks
+    keyPairName: jwts.jks
     keyPairAlias: jwt
     keyPairSecret: 123123
     keyPairStoreSecret: 123123

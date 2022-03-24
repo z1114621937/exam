@@ -52,6 +52,13 @@
             </exclusions>
         </dependency>
 
+        <!--sql性能分析日志-->
+        <dependency>
+            <groupId>p6spy</groupId>
+            <artifactId>p6spy</artifactId>
+            <version>3.9.1</version>
+        </dependency>
+
         <!--Druid连接池-->
         <dependency>
             <groupId>com.alibaba</groupId>

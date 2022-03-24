@@ -11,6 +11,18 @@
         <result column="create_time" property="createTime" />
         <result column="modify_date" property="modifyDate" />
         <result column="tea_name" property="teaName" />
+        <result column="times" property="times" />
     </resultMap>
+
+
+    <resultMap id="selectall" type="java.util.HashMap">
+
+
+    </resultMap>
+
+    <select id="selectall" resultMap="selectall">
+        select tea_name,times,ip,ip_address,data from ks_logs
+    </select>
+
 
 </mapper>

@@ -7,11 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-    
-    
+
+
     @RequestMapping("/getCurrentUser")
-    public int getCurrentUser(@RequestHeader("memberId") int memberId) {
+    public String getCurrentUser(@RequestHeader(name = "school") String school) {
        // return authentication.getPrincipal();
-        return memberId+1;
+
+        return school;
     }
 }

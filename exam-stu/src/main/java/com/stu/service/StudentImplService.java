@@ -16,8 +16,8 @@ public interface StudentImplService extends IService<Student> {
 
     CommonResult register(String username,String password);
 
-    CommonResult avatar(String url);
+    CommonResult avatar(String url,int id);
 
 
-    CommonResult supplements(String name,String age,String sex,String stu_num,String school,String classes);
+    CommonResult supplements(String name,String age,String sex,String stu_num,String school,String classes,int id);
 }

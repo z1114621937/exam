@@ -4,9 +4,9 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.mbg.exam.entity.Class">
-        <id column=" id" property=" id" />
+        <id column=" id" property="id" />
         <result column="specialized" property="specialized" />
-        <result column="sch_id" property="schId" />
+        <result column="school_cl" property="school_cl" />
         <result column="create_date" property="createDate" />
         <result column="modify_date" property="modifyDate" />
     </resultMap>

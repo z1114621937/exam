@@ -19,11 +19,14 @@ spring:
         uri: lb://exam-auth
         predicates:
         - Path=/oauth/**,/user/**
-#      - id: order-servicess
-#        uri: lb://order-servicess
-#        predicates:
-#        - Path=/order/**
-
+      - id: exam-stu
+        uri: lb://exam-stu
+        predicates:
+        - Path=/exam/**,/paper/**,/papers/**
+      - id: exam-sup
+        uri: lb://exam-sup
+        predicates:
+        - Path=/sup/**,
 exam:
   gateway:
     shouldSkipUrls:

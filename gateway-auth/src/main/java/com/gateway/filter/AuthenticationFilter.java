@@ -77,12 +77,22 @@ public class AuthenticationFilter implements GlobalFilter, InitializingBean {
         String memberId = claims.get("additionalInfo", Map.class).get("memberId").toString();
         
      //   String nickName = claims.get("additionalInfo",Map.class).get("nickName").toString();
-        
+        String school = claims.get("additionalInfo", Map.class).get("school").toString();
+
+
+        String classes = claims.get("additionalInfo", Map.class).get("classes").toString();
+
+        String stuNum = claims.get("additionalInfo", Map.class).get("stuNum").toString();
 
         ServerHttpRequest request = serverWebExchange.getRequest().mutate()
-                .header("username",claims.get("user_name",String.class))
+//                .header("username",claims.get("user_name",String.class))
                 .header("memberId",memberId)
             //    .header("nickName",nickName)
+                .header("school",school)
+
+                .header("classes",classes)
+
+                .header("stuNum",stuNum)
                 .build();
         
 

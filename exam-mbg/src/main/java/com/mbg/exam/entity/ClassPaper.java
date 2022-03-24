@@ -33,7 +33,7 @@ public class ClassPaper implements Serializable {
     private String specialized;
 
     @ApiModelProperty(value = "学校id")
-    private Integer schId;
+    private String sch_paper;
 
     private LocalDateTime createDate;
 

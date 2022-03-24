@@ -6,10 +6,22 @@
     <resultMap id="BaseResultMap" type="com.mbg.exam.entity.ClassPaper">
         <id column="id" property="id" />
         <result column="specialized" property="specialized" />
-        <result column="sch_id" property="schId" />
+        <result column="sch_paper" property="sch_paper" />
         <result column="create_date" property="createDate" />
         <result column="modify_date" property="modifyDate" />
         <result column="paper_id" property="paperId" />
     </resultMap>
+
+    <resultMap id="inquirymap" type="java.util.HashMap">
+
+
+    </resultMap>
+
+    <select id="inquiry" resultMap="inquirymap">
+        select ks_paper.exam_name,ks_paper.score,ks_paper.state,ks_paper.start_time,ks_paper.end_time,ks_grade.grade from ks_class_paper
+        LEFT JOIN ks_paper on ks_class_paper.paper_id = ks_paper.id
+        LEFT JOIN ks_grade on ks_class_paper.paper_id=ks_grade.exam_id
+        where ks_class_paper.sch_paper=#{school} and ks_class_paper.specialized=#{classes} and ks_grade.stu_num=#{stuNum}
+    </select>
 
 </mapper>

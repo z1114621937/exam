@@ -1,10 +1,11 @@
 package com.mbg.exam.entity;
 
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.time.LocalDateTime;
 import java.io.Serializable;
+import java.util.Date;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -37,13 +38,18 @@ public class Logs implements Serializable {
 
     @ApiModelProperty(value = "日志明细")
     private String data;
+    // 创建时间：希望在添加数据的时候填充：当前时间
+    @TableField(fill = FieldFill.INSERT)
+    private Date createTime;
 
-    private LocalDateTime createTime;
-
-    private LocalDateTime modifyDate;
+    // 修改时间：希望在添加数据、修改数据的时候填充：当前时间
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private Date modifyDate;
 
     @ApiModelProperty(value = "修改人")
     private String teaName;
+
+    private String times;
 
 
 }

@@ -12,6 +12,7 @@
         <module name="exam-mbg" />
         <module name="examcommon" />
         <module name="auth" />
+        <module name="exam_super" />
       </profile>
     </annotationProcessing>
   </component>
