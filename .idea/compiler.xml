@@ -9,10 +9,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="exam-stu" />
         <module name="gateway-auth" />
-        <module name="exam-mbg" />
         <module name="examcommon" />
         <module name="auth" />
         <module name="exam_super" />
+        <module name="exam-admin" />
       </profile>
     </annotationProcessing>
   </component>

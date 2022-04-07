@@ -16,7 +16,7 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author zuo
- * @since 2022-03-17
+ * @since 2022-03-31
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -31,6 +31,14 @@ public class Answer implements Serializable {
 
     @ApiModelProperty(value = "学生答案")
     private String answer;
+
+    private String answer2;
+
+    private String answer3;
+
+    private String answer4;
+
+    private String answer5;
 
     @ApiModelProperty(value = "试卷id")
     private String paperId;

@@ -11,6 +11,7 @@
     <option name="ignoredFiles">
       <set>
         <option value="$PROJECT_DIR$/exam-common/pom.xml" />
+        <option value="$PROJECT_DIR$/exam-mbg/exam-admin/pom.xml" />
       </set>
     </option>
   </component>

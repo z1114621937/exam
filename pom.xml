@@ -15,6 +15,7 @@
         <module>exam-mbg</module>
         <module>exam-stu</module>
         <module>exam_super</module>
+        <module>exam-admin</module>
     </modules>
     <name>springcloudalibaba</name>
     <description>Spring Cloud Alibaba</description>

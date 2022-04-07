@@ -17,7 +17,7 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author zuo
- * @since 2022-03-17
+ * @since 2022-04-07
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -31,6 +31,8 @@ public class FullInput implements Serializable {
     private Integer id;
 
     private String futSubject;
+
+    private Integer futScore;
 
     private String futData;
 

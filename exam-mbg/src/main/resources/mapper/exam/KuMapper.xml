@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mbg.exam.mapper.KuMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mbg.exam.entity.Ku">
+        <id column="id" property="id" />
+        <result column="ch_id" property="chId" />
+        <result column="fen_id" property="fenId" />
+        <result column="fill_id" property="fillId" />
+        <result column="full_id" property="fullId" />
+        <result column="listen_id" property="listenId" />
+        <result column="mingci" property="mingci" />
+        <result column="yue_id" property="yueId" />
+        <result column="te_name" property="teName" />
+        <result column="create_date" property="createDate" />
+        <result column="modify_date" property="modifyDate" />
+        <result column="ku_name" property="kuName" />
+        <result column="ku_subject" property="kuSubject" />
+        <result column="state_de" property="stateDe" />
+        <result column="tiku_id" property="tikuId" />
+    </resultMap>
+    <select id="getchoosefu1" resultType="java.util.List">
+        select * from ks_ku where ks_paper.tiku_id=#{id}
+    </select>
+
+</mapper>

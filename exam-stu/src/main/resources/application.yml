@@ -27,15 +27,15 @@ spring:
   application:
     name: exam-stu
     #配置nacos注册中心地址
-  cloud:
     nacos:
       discovery:
         server-addr: 47.95.232.196:8847  #注册中心地址
         namespace: public  #环境隔离
 
   datasource:
-    url: jdbc:mysql://localhost:3306/exam?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
-    username: root
+    url: jdbc:mysql://47.95.232.196:3306/exam?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: exam
+  cloud:
     password: root
     druid:
       initial-size: 5 #连接池初始化大小

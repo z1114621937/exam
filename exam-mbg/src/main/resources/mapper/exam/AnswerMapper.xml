@@ -6,6 +6,10 @@
     <resultMap id="BaseResultMap" type="com.mbg.exam.entity.Answer">
         <id column="id" property="id" />
         <result column="answer" property="answer" />
+        <result column="answer2" property="answer2" />
+        <result column="answer3" property="answer3" />
+        <result column="answer4" property="answer4" />
+        <result column="answer5" property="answer5" />
         <result column="paper_id" property="paperId" />
         <result column="stu_id" property="stuId" />
         <result column="is_true" property="isTrue" />
@@ -13,6 +17,34 @@
         <result column="modify_date" property="modifyDate" />
         <result column="state" property="state" />
         <result column="state_de" property="stateDe" />
+        <collection property="paperId" ofType="com.mbg.exam.entity.Paper">
+            <id column="id" property="id" />
+            <result column="exam_name" property="examName" />
+            <result column="manner" property="manner" />
+            <result column="tea_name" property="teaName" />
+            <result column="score" property="score" />
+            <result column="subject" property="subject" />
+            <result column="create_date" property="createDate" />
+            <result column="modify_date" property="modifyDate" />
+            <result column="state" property="state" />
+            <result column="start_time" property="startTime" />
+            <result column="end_time" property="endTime" />
+            <result column="exam_time" property="examTime" />
+            <result column="num" property="num" />
+            <result column="state_de" property="stateDe" />
+        </collection>
     </resultMap>
+
+
+
+
+    <select id="getpaperandanswer" resultMap="BaseResultMap">
+        select * from ks_answer left join ks_paper on ks_answer.paper_id=ks_paper.id
+        where ks_answer.paper_id=#{paper_id}
+    </select>
+
+
+
+
 
 </mapper>

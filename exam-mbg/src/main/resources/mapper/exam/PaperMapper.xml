@@ -170,9 +170,7 @@
             <result column="mi_semester" property="miSemester" />
             <result column="state_de" property="stateDe" />
         </collection>
-
     </resultMap>
-
     <resultMap id="inquirys" type="com.mbg.exam.entity.Paper">
         <id column="id" property="id" />
         <result column="exam_name" property="examName" />
@@ -181,6 +179,19 @@
         <result column="exam_time" property="examTime" />
         <result column="num" property="num" />
     </resultMap>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <select id="inquiry" resultMap="inquirys">
         select * from ks_class_paper LEFT JOIN ks_paper on ks_class_paper.paper_id = ks_paper.id
@@ -209,8 +220,8 @@
                                 LEFT JOIN ks_answer on ks_paper.id=ks_answer.paper_id
         where ks_paper.id=#{id}
     </select>
-    
-    
+
+
 
 
 </mapper>

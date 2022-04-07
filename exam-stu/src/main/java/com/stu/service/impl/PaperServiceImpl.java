@@ -99,7 +99,6 @@ public class PaperServiceImpl extends ServiceImpl<PaperMapper, Paper> implements
 //        return CommonResult.success(paperMapper.selectList(queryWrapper2).stream().map(paper -> { paper.getState(),paper.getExamName()
 //        }).collect(Collectors.toList()));
 
-
         return CommonResult.success(baseMapper.inquiry(school, classes), "查询成功");
     }
 }

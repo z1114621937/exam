@@ -46,7 +46,6 @@ public class GeneratorApp {
         String tableName = scanner("表名（多个用，号分隔，或者按前缀（pms*））");//表名（多个用，号分隔，或者按前缀（pms*））
         String prefixName = scanner("需要替换的表前缀");
 
-
         // 代码生成器
         AutoGenerator mpg = new AutoGenerator();
 
@@ -84,9 +83,9 @@ public class GeneratorApp {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setUrl("jdbc:mysql://localhost:3306/exam?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&");
+        dsc.setUrl("jdbc:mysql://47.95.232.196:3306/exam?characterEncoding=utf8&useSSL=false&serverTimezone=UTC&");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
-        dsc.setUsername("root");
+        dsc.setUsername("exam");
         dsc.setPassword("root");
         mpg.setDataSource(dsc);
 

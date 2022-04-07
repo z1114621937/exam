@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.common.api.CommonResult;
 import com.mbg.exam.entity.Student;
 
+import java.util.Map;
+
 /**
  * <p>
  *  服务类
@@ -20,4 +22,5 @@ public interface StudentImplService extends IService<Student> {
 
 
     CommonResult supplements(String name,String age,String sex,String stu_num,String school,String classes,int id);
+
 }

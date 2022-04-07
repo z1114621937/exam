@@ -4,7 +4,9 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.common.api.CommonResult;
+import com.mbg.exam.entity.Answer;
 import com.mbg.exam.entity.Student;
+import com.mbg.exam.mapper.AnswerMapper;
 import com.mbg.exam.mapper.StudentMapper;
 import com.stu.service.StudentImplService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -29,8 +32,12 @@ public class StudentServiceImpl extends ServiceImpl<StudentMapper, Student> impl
     @Autowired
     private PasswordEncoder passwordEncoder;
 
+
+    @Autowired
+    private AnswerMapper answerMapper;
+
     @Override
-    public CommonResult register(String username, String password) {
+    public CommonResult register(String username, String    password) {
         QueryWrapper<Student> queryWrapper=new QueryWrapper<>();
         queryWrapper.lambda().eq(Student::getUsername,username);
 //        Student student= baseMapper.selectOne(queryWrapper);
@@ -83,6 +90,7 @@ public class StudentServiceImpl extends ServiceImpl<StudentMapper, Student> impl
         student=baseMapper.selectById(id);
         return CommonResult.success(student,"个人信息添加成功");
     }
+
 
 
 }

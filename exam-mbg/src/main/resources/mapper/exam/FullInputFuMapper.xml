@@ -6,6 +6,7 @@
     <resultMap id="BaseResultMap" type="com.mbg.exam.entity.FullInputFu">
         <id column="id" property="id" />
         <result column="in_subject" property="inSubject" />
+        <result column="in_score" property="inScore" />
         <result column="in_data" property="inData" />
         <result column="answer1A" property="answer1a" />
         <result column="answer1B" property="answer1b" />

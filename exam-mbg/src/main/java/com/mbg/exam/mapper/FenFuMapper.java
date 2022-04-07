@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  * </p>
  *
  * @author zuo
- * @since 2022-03-17
+ * @since 2022-04-06
  */
 public interface FenFuMapper extends BaseMapper<FenFu> {
 

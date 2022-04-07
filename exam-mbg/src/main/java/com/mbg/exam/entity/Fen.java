@@ -16,7 +16,7 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author zuo
- * @since 2022-03-17
+ * @since 2022-04-07
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -68,6 +68,8 @@ public class Fen implements Serializable {
 
     @ApiModelProperty(value = "难易程度")
     private String fenLevel;
+
+    private Integer fState;
 
 
 }

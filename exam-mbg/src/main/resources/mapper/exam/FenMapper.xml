@@ -23,6 +23,7 @@
         <result column="modify_date" property="modifyDate" />
         <result column="state_de" property="stateDe" />
         <result column="fen_level" property="fenLevel" />
+        <result column="f_state" property="fState" />
     </resultMap>
 
 </mapper>

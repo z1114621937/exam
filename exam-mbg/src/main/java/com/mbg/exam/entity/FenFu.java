@@ -16,7 +16,7 @@ import lombok.EqualsAndHashCode;
  * </p>
  *
  * @author zuo
- * @since 2022-03-17
+ * @since 2022-04-06
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -71,6 +71,9 @@ public class FenFu implements Serializable {
 
     @ApiModelProperty(value = "试卷id")
     private Integer paperId;
+
+    @ApiModelProperty(value = "1是分录 2是资料")
+    private Integer feState;
 
 
 }
