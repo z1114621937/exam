@@ -1,6 +1,6 @@
 package com.mbg.exam.mapper;
 
-import com.common.api.CommonResult;
+
 import com.mbg.exam.entity.ClassPaper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;

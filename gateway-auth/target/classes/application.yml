@@ -8,11 +8,11 @@ spring:
       discovery:
         server-addr: 47.95.232.196:8847
         namespace: public
-    sentinel:
-      transport:
-        dashboard: 127.0.0.1:8858
-        #默认是将链路收敛   需要将链路收敛关闭
-      web-context-unify: false
+#    sentinel:
+#      transport:
+#        dashboard: 127.0.0.1:8858
+#        #默认是将链路收敛   需要将链路收敛关闭
+#      web-context-unify: false
 
     gateway:
       discovery:

@@ -1,0 +1,15 @@
+com\auths\config\ExamResourceServerConfig.class
+com\auths\service\StudentServiceImpl.class
+com\auths\config\AuthorizationServerConfig.class
+com\auths\config\JwtTokenStoreConfig.class
+com\auths\enhancer\ExamTokenEnhancer.class
+com\auths\properties\JwtCAProperties.class
+com\auths\config\MyMetaObjectHandler.class
+com\auths\config\MyBatisConfig.class
+com\auths\domain\UmsMember.class
+com\auths\service\StudentImplService.class
+com\auths\service\ExamUserDetailService.class
+com\auths\ExamAuthApplication.class
+com\auths\domain\MemberDetails.class
+com\auths\config\WebSecurityConfig.class
+com\auths\controller\UserController.class

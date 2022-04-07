@@ -1,0 +1,5 @@
+com\gateway\properties\NotAuthUrlProperties.class
+com\utils\JwtUtils.class
+com\gateway\ExamAuthGatewayApplication.class
+com\gateway\filter\AuthenticationFilter.class
+com\gateway\config\RibbonConfig.class
