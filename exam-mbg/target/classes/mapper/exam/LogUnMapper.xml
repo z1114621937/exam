@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mbg.exam.mapper.LogUnMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mbg.exam.entity.LogUn">
+        <id column="id" property="id" />
+        <result column="tea_ip" property="teaIp" />
+        <result column="operate" property="operate" />
+        <result column="tea_id" property="teaId" />
+        <result column="create_time" property="createTime" />
+        <result column="modify_date" property="modifyDate" />
+        <result column="c_id" property="cId" />
+        <result column="f_id" property="fId" />
+        <result column="fi_id" property="fiId" />
+        <result column="fu_id" property="fuId" />
+        <result column="lis_id" property="lisId" />
+        <result column="min_id" property="minId" />
+        <result column="yu_id" property="yuId" />
+        <result column="state_de" property="stateDe" />
+        <result column="name" property="name" />
+    </resultMap>
+
+
+    <resultMap id="inquirymap" type="java.util.HashMap">
+
+
+    </resultMap>
+
+    <select id="selectlog" resultMap="inquirymap">
+        select ks_log_un.tea_ip,ks_log_un.operate,ks_log_un.operate,ks_student.name,
+               ks_log_un.c_id,ks_log_un.f_id,ks_log_un.fi_id,ks_log_un.fu_id,ks_log_un.lis_id,
+               ks_log_un.min_id,ks_log_un.yu_id,ks_log_un.upde,ks_log_un.un_id
+        from ks_log_un  left join ks_student on ks_log_un.tea_id=ks_student.id
+
+    </select>
+</mapper>

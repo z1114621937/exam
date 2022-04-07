@@ -24,6 +24,12 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
+        <!--        sentinel依赖-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
+
         <dependency>
             <groupId>org.example</groupId>
             <artifactId>exam-mbg</artifactId>

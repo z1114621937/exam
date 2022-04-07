@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mbg.exam.mapper.TikuMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mbg.exam.entity.Tiku">
+        <id column="id" property="id" />
+        <result column="k_name" property="kName" />
+        <result column="t_name" property="tName" />
+        <result column="k_subject" property="kSubject" />
+        <result column="create_date" property="createDate" />
+        <result column="modify_date" property="modifyDate" />
+        <result column="state_de" property="stateDe" />
+    </resultMap>
+
+</mapper>

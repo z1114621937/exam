@@ -72,5 +72,6 @@ public class FenFu implements Serializable {
     @ApiModelProperty(value = "试卷id")
     private Integer paperId;
 
+    private Integer feState;
 
 }

@@ -6,6 +6,8 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import java.time.LocalDateTime;
 import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
+import java.util.Date;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -60,9 +62,9 @@ public class Listen implements Serializable {
     @ApiModelProperty(value = "分数")
     private Integer ltScore;
 
-    private LocalDateTime createDate;
+    private Date createDate;
 
-    private LocalDateTime modifyDate;
+    private Date modifyDate;
 
     private Integer ltState;
 

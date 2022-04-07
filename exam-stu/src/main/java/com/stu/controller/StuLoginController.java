@@ -89,7 +89,7 @@ public class StuLoginController {
      */
     @RequestMapping("/selectpaper")
     public CommonResult selectpaper(@RequestParam Integer id) {
-        return paperImplService.selectpaper(id);
+        return paperImplService.selectpaper2(id);
     }
 
 
@@ -108,6 +108,8 @@ public class StuLoginController {
         return paperImplService.inquiry(student.getSchool(),student.getClasses());
 
     }
+
+
 
 
 }

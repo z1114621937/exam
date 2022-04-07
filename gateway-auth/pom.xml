@@ -19,6 +19,13 @@
 
     <dependencies>
 
+        <!--        sentinel依赖-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+        </dependency>
+
+
         <dependency>
             <groupId>org.example</groupId>
             <artifactId>examcommon</artifactId>

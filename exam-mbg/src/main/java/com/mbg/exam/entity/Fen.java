@@ -69,5 +69,7 @@ public class Fen implements Serializable {
     @ApiModelProperty(value = "难易程度")
     private String fenLevel;
 
+    private Integer fState;
+
 
 }

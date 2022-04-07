@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mbg.exam.mapper.KuMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mbg.exam.entity.Ku">
+        <id column="id" property="id" />
+        <result column="ch_id" property="chId" />
+        <result column="fen_id" property="fenId" />
+        <result column="fill_id" property="fillId" />
+        <result column="full_id" property="fullId" />
+        <result column="listen_id" property="listenId" />
+        <result column="mingci" property="mingci" />
+        <result column="yue_id" property="yueId" />
+        <result column="te_name" property="teName" />
+        <result column="create_date" property="createDate" />
+        <result column="modify_date" property="modifyDate" />
+        <result column="ku_name" property="kuName" />
+        <result column="ku_subject" property="kuSubject" />
+        <result column="ct_question" property="ctQuestion" />
+        <result column="fen_question" property="fenQuestion" />
+        <result column="ft_question" property="ftQuestion" />
+        <result column="fut_question" property="futData" />
+        <result column="lt_question" property="ltQuestion" />
+        <result column="mt_question" property="mtQuestion" />
+        <result column="yue_question" property="yueQuestion" />
+    </resultMap>
+
+    <resultMap id="inquirymap" type="java.util.HashMap">
+
+
+    </resultMap>
+    <select id="selectku" resultMap="inquirymap">
+        select tm_choose.ct_question ,tm_fill.ft_question ,tm_full_input.fut_data
+             ,tm_listen.lt_question ,tm_mingci.mt_question ,tm_yue.yue_question ,tm_fen.fen_question,
+               tm_choose.id,tm_fill.id,tm_full_input.id,tm_listen.id,tm_mingci.id,tm_yue.id,tm_fen.id
+        from ks_ku  left join tm_choose on ks_ku.ch_id=tm_choose.id
+                                LEFT JOIN tm_fill on ks_ku.fill_id=tm_fill.id
+                                LEFT JOIN tm_full_input on ks_ku.full_id=tm_full_input.id
+                                LEFT JOIN tm_listen on ks_ku.listen_id=tm_listen.id
+                                LEFT JOIN tm_mingci on ks_ku.mingci=tm_mingci.id
+                                LEFT JOIN tm_yue on ks_ku.yue_id=tm_yue.id
+                    LEFT JOIN tm_fen on ks_ku.fen_id=tm_fen.id
+        where ks_ku.tiku_id=#{id}
+    </select>
+
+
+    <select id="getchooseful1"  resultMap="inquirymap">
+        select ks_ku.te_name, ex_choose_fu.c_subject,ex_choose_fu.c_level from ks_ku
+           left join ex_choose_fu on ks_ku.ch_id=ex_choose_fu.id
+        where ks_ku.tiku_id=#{id} and ex_choose_fu.c_state=1
+    </select>
+
+    <select id="getchooseful2"  resultMap="inquirymap">
+        select ks_ku.te_name,ex_choose_fu.c_subject,ex_choose_fu.c_level from ks_ku
+       left join ex_choose_fu on ks_ku.ch_id=ex_choose_fu.id
+        where ks_ku.tiku_id=#{id} and ex_choose_fu.c_state=2
+    </select>
+
+    <select id="getchooseful3"  resultMap="inquirymap">
+        select ks_ku.te_name,ex_fill_fu.fi_subject,ex_fill_fu.fi_level from ks_ku
+           left join ex_fill_fu on ks_ku.fill_id=ex_fill_fu.id
+        where ks_ku.tiku_id=#{id} and ex_fill_fu.fi_state=1
+    </select>
+
+
+    <select id="getchooseful4"  resultMap="inquirymap">
+        select ks_ku.te_name,ex_fill_fu.fi_subject,ex_fill_fu.fi_level from ks_ku
+                     left join ex_fill_fu on ks_ku.fill_id=ex_fill_fu.id
+        where ks_ku.tiku_id=#{id} and ex_fill_fu.fi_state=2
+    </select>
+
+    <select id="getchooseful5"  resultMap="inquirymap">
+        select ks_ku.te_name,ex_fen_fu.fen_subject,ex_fen_fu.fen_level from ks_ku
+                            left join ex_fen_fu on ks_ku.fen_id=ex_fen_fu.id
+        where ks_ku.tiku_id=#{id} and ex_fen_fu.fe_state=1
+    </select>
+
+
+    <select id="getchooseful6"  resultMap="inquirymap">
+        select ks_ku.te_name,ex_fen_fu.fen_subject,ex_fen_fu.fen_level from ks_ku
+                               left join ex_fen_fu on ks_ku.fen_id=ex_fen_fu.id
+        where ks_ku.tiku_id=#{id} and ex_fen_fu.fe_state=2
+    </select>
+
+
+    <select id="getchooseful7"  resultMap="inquirymap">
+        select ks_ku.te_name,ex_full_input_fu.in_subject,ex_full_input_fu.in_level from ks_ku
+           join ex_full_input_fu on ks_ku.full_id=ex_full_input_fu.id
+        where ks_ku.tiku_id=#{id}
+    </select>
+
+
+    <select id="getchooseful8"  resultMap="inquirymap">
+        select ks_ku.te_name,ex_listen_fu.li_subject,ex_listen_fu.li_level from ks_ku
+                 join ex_listen_fu on ks_ku.listen_id=ex_listen_fu.id
+        where ks_ku.tiku_id=#{id}
+    </select>
+
+    <select id="getchooseful9"  resultMap="inquirymap">
+        select ks_ku.te_name,ex_mingci_fu.mi_subject,ex_mingci_fu.mi_level from ks_ku
+            left  join ex_mingci_fu on ks_ku.mingci=ex_mingci_fu.id
+        where ks_ku.tiku_id=#{id} and ex_mingci_fu.mi_state=1
+    </select>
+
+
+    <select id="getchooseful10"  resultMap="inquirymap">
+        select ks_ku.te_name,ex_mingci_fu.mi_subject,ex_mingci_fu.mi_level from ks_ku
+                      left  join ex_mingci_fu on ks_ku.mingci=ex_mingci_fu.id
+        where ks_ku.tiku_id=#{id} and ex_mingci_fu.mi_state=2
+    </select>
+
+
+    <select id="getchooseful11"  resultMap="inquirymap">
+        select ks_ku.te_name,ex_mingci_fu.mi_subject,ex_mingci_fu.mi_level from ks_ku
+                    left  join ex_mingci_fu on ks_ku.mingci=ex_mingci_fu.id
+        where ks_ku.tiku_id=#{id} and ex_mingci_fu.mi_state=3
+    </select>
+
+
+    <select id="getchooseful12"  resultMap="inquirymap">
+        select ks_ku.te_name,ex_mingci_fu.mi_subject,ex_mingci_fu.mi_level from ks_ku
+              left  join ex_mingci_fu on ks_ku.mingci=ex_mingci_fu.id
+        where ks_ku.tiku_id=#{id} and ex_mingci_fu.mi_state=4
+    </select>
+
+    <select id="getchooseful13"  resultMap="inquirymap">
+        select ks_ku.te_name,ex_mingci_fu.mi_subject,ex_mingci_fu.mi_level from ks_ku
+                       left  join ex_mingci_fu on ks_ku.mingci=ex_mingci_fu.id
+        where ks_ku.tiku_id=#{id} and ex_mingci_fu.mi_state=5
+    </select>
+
+    <select id="getchooseful14"  resultMap="inquirymap">
+        select ks_ku.te_name,ex_yue_fu.yue_subject,ex_yue_fu.yue_level from ks_ku
+              join ex_yue_fu on ks_ku.yue_id=ex_yue_fu.id
+        where ks_ku.tiku_id=#{id}
+    </select>
+
+</mapper>

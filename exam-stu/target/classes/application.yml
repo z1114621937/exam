@@ -32,6 +32,11 @@ spring:
       discovery:
         server-addr: 47.95.232.196:8847  #注册中心地址
         namespace: public  #环境隔离
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8858
+        #默认是将链路收敛   需要将链路收敛关闭
+      web-context-unify: false
 
   datasource:
     url: jdbc:mysql://localhost:3306/exam?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
@@ -46,6 +51,7 @@ spring:
       stat-view-servlet: #访问监控网页的登录用户名和密码
         login-username: druid
         login-password: druid
+
 ## application-dev.yml 文件
 mybatis-plus:
   configuration:

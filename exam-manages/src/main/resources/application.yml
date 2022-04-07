@@ -1,0 +1,60 @@
+server:
+  port: 8090
+
+spring:
+  redis:
+    # redis数据库索引(默认为0)，我们使用索引为3的数据库，避免和其他数据库冲突
+    database: 3
+    # redis服务器地址（默认为loaclhost）
+    host: 47.95.232.196
+    # redis端口（默认为6379）
+    port: 6379
+    # redis访问密码（默认为空）
+    password: 2542556
+    # redis连接超时时间（单位毫秒）
+    timeout: 0
+    # redis连接池配置
+    pool:
+      # 最大可用连接数（默认为8，负数表示无限）
+      max-active: 8
+      # 最大空闲连接数（默认为8，负数表示无限）
+      max-idle: 8
+      # 最小空闲连接数（默认为0，该值只有为正数才有用）
+      min-idle: 0
+      # 从连接池中获取连接最大等待时间（默认为-1，单位为毫秒，负数表示无限）
+      max-wait: -1
+  main:
+    allow-bean-definition-overriding: true      #允许bean定义可以去覆盖
+  application:
+    name: exam-manages
+    #配置nacos注册中心地址
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.95.232.196:8847  #注册中心地址
+        namespace: public  #环境隔离
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/exam?serverTimezone=UTC&useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: root
+    druid:
+      initial-size: 5 #连接池初始化大小
+      min-idle: 10 #最小空闲连接数
+      max-active: 20 #最大连接数
+      web-stat-filter:
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*" #不统计这些请求数据
+      stat-view-servlet: #访问监控网页的登录用户名和密码
+        login-username: druid
+        login-password: druid
+## application-dev.yml 文件
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: stateDe  #逻辑删除的字段
+      logic-delete-value: 0     #已删除数据
+      logic-not-delete-value: 1   #有效数据
+  configuration:
+    ## 日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
